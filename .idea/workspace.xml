@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95819bba-88aa-456d-a42e-e5fbc6a8ca9b" name="Default Changelist" comment="" />
+    <list default="true" id="95819bba-88aa-456d-a42e-e5fbc6a8ca9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Hamburgueria/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hamburgueria/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +42,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="1516" />
-          <entry key="html" value="3133" />
-          <entry key="py" value="6974" />
+          <entry key="html" value="3178" />
+          <entry key="py" value="6975" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3133" />
-          <entry key="Python" value="8486" />
+          <entry key="HTML" value="3178" />
+          <entry key="Python" value="8487" />
           <entry key="SQL" value="4" />
         </counts>
       </usages-collector>
@@ -59,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/Hamburgueria/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -79,16 +81,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hamburgueria/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            <state relative-caret-position="1020">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
-                <marker date="1547233634491" expanded="true" signature="203:204" ph="..." />
-                <marker date="1547233634491" expanded="true" signature="1368:1725" ph="..." />
-                <marker date="1547233634491" expanded="true" signature="2115:2116" ph="..." />
-                <marker date="1547233634491" expanded="true" signature="2115:2485" ph="..." />
-                <marker date="1547233634491" expanded="true" signature="2516:2618" ph="..." />
-                <marker date="1547233634491" expanded="true" signature="2679:2684" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="203:204" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="1346:1689" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="2079:2080" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="2079:2419" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="2450:2552" ph="..." />
+                <marker date="1547236375045" expanded="true" signature="2613:2618" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,7 +111,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hamburgueria/templates/Hamburgueria/pedidos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="286">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
@@ -141,7 +143,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status</find>
       <find>auth</find>
       <find>style</find>
       <find>next</find>
@@ -168,9 +169,10 @@
       <find>for</find>
       <find>meus pe</find>
       <find>finalizar</find>
-      <find>meus</find>
       <find>pedido</find>
       <find>print(</find>
+      <find>meus</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -369,7 +371,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -383,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2852459" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2852459" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -559,21 +561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/_navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="e#2156#2163#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hamburgueria/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -597,25 +588,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/_navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="e#2156#2163#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hamburgueria/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="1020">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
-            <marker date="1547233634491" expanded="true" signature="203:204" ph="..." />
-            <marker date="1547233634491" expanded="true" signature="1368:1725" ph="..." />
-            <marker date="1547233634491" expanded="true" signature="2115:2116" ph="..." />
-            <marker date="1547233634491" expanded="true" signature="2115:2485" ph="..." />
-            <marker date="1547233634491" expanded="true" signature="2516:2618" ph="..." />
-            <marker date="1547233634491" expanded="true" signature="2679:2684" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="203:204" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="1346:1689" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="2079:2080" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="2079:2419" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="2450:2552" ph="..." />
+            <marker date="1547236375045" expanded="true" signature="2613:2618" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hamburgueria/templates/Hamburgueria/pedidos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="286">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>

@@ -23,10 +23,9 @@ def pedidos(request):
     context['staff'] = request.user.is_staff
     if request.user.is_authenticated:
         historico = Pedido.objects.filter(owner_id=request.user.id)
-        produtos = ProdutoPedido.objects.filter(pedido__id=request.user.id)
+        produtos = ProdutoPedido.objects.filter(pedido__owner_id=request.user.id)
         context['historico'] = historico
         context['produtos'] = produtos
-        print(historico[0])
     return render(request, 'Hamburgueria/pedidos.html', context)
 
 
@@ -35,7 +34,6 @@ def detalhes(request):
     context['usr'] = request.user.is_authenticated
     context['staff'] = request.user.is_staff
     pk = request.data['pk']
-    print(pk)
     if request.user.is_authenticated:
         pedido = ProdutoPedido.objects.filter(pedido__id=pk)
         context['pedido'] = pedido
@@ -60,7 +58,6 @@ def fechaProduto(request):
         pedido = Pedido.objects.create(owner=request.user)
         for item in carrinho:
             prodPedido = ProdutoPedido.objects.create(pedido=pedido, produto_id=item.produto.id, qtd=item.qtd)
-            print(prodPedido)
             item.delete()
     return redirect('ham:home')
 
@@ -77,7 +74,6 @@ def cancelaPedido(request, pk):
     if prodPedido:
         for item in prodPedido:
             carrinho = Carrinho.objects.create(owner=request.user, produto=item.produto, qtd=item.qtd)
-            print(carrinho)
             item.delete()
     pedido.delete()
     return redirect('ham:pedidos')
