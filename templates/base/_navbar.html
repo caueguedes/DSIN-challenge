@@ -1,0 +1,89 @@
+ <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="{% url 'ham:home' %}" style='font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;'>VH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            {% if staff %}
+              <li class="nav-item active">
+              <a class="nav-link" href="/admin/">Administração <span class="sr-only">(current)</span></a>
+                </li>
+            {% endif %}
+
+            {% if usr and not staff %}
+              <a class="nav-link" href="{% url 'ham:pedidos' %}">Meus Pedidos <span class="sr-only"></span></a>
+            {% endif %}
+          </ul>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-right: 10px">
+            Carrinho <span class="badge badge-light">{{ carrinho | default_if_none:"0"}}</span>
+        </button>
+
+            {% if usr %}
+                <a class="btn btn-outline-primary" href="{% url 'logout' %}">Sair</a>
+            {% else %}
+                <a class="btn btn-outline-primary" href="{% url 'login' %}">Entrar</a>
+            {% endif %}
+
+        </div>
+      </nav>
+    </header>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carrinho</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Quantidade</th>
+      <th scope="col">Preço</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for item in listaCarrinho %}
+            <tr>
+              <th scope="row">*</th>
+              <td>{{item.produto}}</td>
+              <td>{{item.qtd }}</td>
+              <td>{{item.produto.preco}}</td>
+              <td>
+                <button type="button" class="btn btn-danger"><a class="btn-danger" href="{% url 'ham:remove' pk=item.produto.id %}">remover</a></button>
+              </td>
+            </tr>
+        {% empty %}
+            <p> Nenhum item adicionado ao carrinho</p>
+        {% endfor %}
+  </tbody>
+</table>
+
+
+
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" ><a class=" btn-primary" href="{% url 'ham:finaliza' %}">Finalizar Pedido</a></button>
+      </div>
+    </div>
+  </div>
+</div>

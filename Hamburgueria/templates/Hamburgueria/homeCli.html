@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load staticfiles%}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block style %}{% endblock %}
+
+{% block body %}
+    {%  include 'base/_navbar.html' %}
+    <br><br><br><br>
+
+    <div class="container marketing">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            {% for produto in produtos %}
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="{{ produto.image }}" alt="Card image {{ produto.nome }}">
+                  <div class="card-body">
+                    <p class="card-text">{{ produto.nome }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                                              {% if usr %}
+
+                      <div class="btn-group">
+                        <a type="button" class="btn btn-sm btn-outline-secondary" href="{% url 'ham:adicionar' produto.id %}">Adicionar</a>
+                      </div>
+                                              {% endif %}
+
+                      <small class="text-muted">R$ {{ produto.preco }}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div><!-- /Container end -->
+      </div>
+    </div>
+{%  endblock %}
+

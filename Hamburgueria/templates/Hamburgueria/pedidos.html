@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% load staticfiles%}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block style %}{% endblock %}
+
+{% block body %}
+    {%  include 'base/_navbar.html' %}
+    <br><br><br><br>
+
+    <div class="container text-left " >
+
+    {% for pedido in historico %}
+        <div class="card">
+          <div class="card-header">
+              Pedido nº {{ pedido.id }} - Data {{ pedido.data  }}
+              <p> Status:     {% if pedido.status_pedido == 'P'%}
+                        Pedido Efetuado
+                    {% elif pedido.status_pedido == 'A'%}
+                        Pedido em Andamento
+                    {% elif pedido.status_pedido == 'E'%}
+                        Pedido em Entrega
+                    {% else %}
+                        Entregue
+                    {% endif %}</p>
+          </div>
+          <div class="card-body">
+                <p class="card-text">
+
+                    <ul class="list-group">
+                        {% for item in produtos %}
+                            {% if item.pedido.id == pedido.id %}
+                            <li class="list-group-item">
+                                 {{ item.produto }}  {{ item.qtd }} unidades.
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </p>
+          {% if pedido.status_pedido == 'P' %}
+                <a href="{% url 'ham:cancela' pk=pedido.id %}" class="text-right btn btn-danger  ">Editar</a>
+          {% endif %}
+          </div>
+        </div>
+
+    <br>
+
+    {% empty %}
+        Sorry, no athletes in this list.
+    {% endfor %}
+
+    </div><!-- /Container end -->
+{%  endblock %}
